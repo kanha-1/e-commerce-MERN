@@ -4,7 +4,6 @@ const User = require("../models/userModel");
 
 module.exports = async function (req, res, next) {
 	const authHeader = req.headers["authorization"];
-
 	if (!authHeader) {
 		return res
 			.status(200)
