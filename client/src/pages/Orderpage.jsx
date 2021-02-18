@@ -20,13 +20,13 @@ const Orderpage = ({ orders, getallOrders, history, user }) => {
       </div>
     ) : orders.length === 0 ? (
       <div>
-        <h3>Your Orders are empty. Please order some item.</h3>
+        <h3>Your Orders are empty.</h3>
 
         <h4
           style={{ color: "#57A2E9", textAlign: "center", cursor: "pointer" }}
           onClick={handleclicktohome}
         >
-          Click here to go to Home page
+          Back to HomePage
         </h4>
       </div>
     ) : (

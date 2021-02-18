@@ -17,14 +17,7 @@ nav a{
 .border{
     border: none !important;
 }
-.product_div{
-    display: flex;
-    width: 100%;
-    margin: auto;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-}
-.card{
+/* .card{
     height: 18rem !important;
-    width: 10rem !important;
-}
+    width: 8rem !important;
+} */

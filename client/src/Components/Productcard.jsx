@@ -24,27 +24,21 @@ const Productcard = ({ data, addtoCart, cartResponse }) => {
 	};
 	return (
 		<>
-			<div className="product_div">
-				<Grid container spacing={1}>
-					<Grid item xs={4} direction="row" spacing={3}>
-						<Card className="card">
-							<img style={{ height: "200px" }} src={image} alt="" />
-							<div>
-								<p className="title">{limitDescription(name, 20)}</p>
-								<p className="title">Rs. {cost}</p>
-								<Button
-									startIcon={<AddIcon />}
-									data-id={_id}
-									onClick={handleaddCart}>
-									{id === _id && cartResponse
-										? "Adding to Cart..."
-										: "Add to Cart"}
-								</Button>
-							</div>
-						</Card>
-					</Grid>
-				</Grid>
-			</div>
+			<Grid item xs={3}>
+				<Card className="card">
+					<img style={{ height: "200px" }} src={image} alt="" />
+					<div className='pl-2'>
+						<p className="title">{limitDescription(name, 20)}</p>
+						<p className="title">Rs. {cost}</p>
+						<button
+							startIcon={<AddIcon />}
+							data-id={_id}
+							onClick={handleaddCart}>
+							{id === _id && cartResponse ? "Adding to Cart..." : "Add to Cart"}
+						</button>
+					</div>
+				</Card>
+			</Grid>
 		</>
 	);
 };
