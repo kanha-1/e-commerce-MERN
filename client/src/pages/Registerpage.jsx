@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { registerUser } from "../redux/actions/userActions";
 import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
-
+import auth from "../Components/images/undraw_authentication_fsn5.svg"
 const Registerpage = ({
   registerUser,
   user,
@@ -141,6 +141,10 @@ const Registerpage = ({
   // Component
   return (
     <>
+    <div className='login_div'>
+    <div className='imgauth'>
+      <img src={auth} alt=""/>
+    </div>
       <div class="form-group border padding-small margin-top-large lg-4 md-8 sm-10">
         {responseFetchingState ? (
           <div
@@ -248,6 +252,7 @@ const Registerpage = ({
         ) : (
           ""
         )}
+      </div>
       </div>
     </>
   );

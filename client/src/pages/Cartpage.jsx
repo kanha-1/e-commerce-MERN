@@ -4,7 +4,7 @@ import { placeOrder } from "../redux/actions/orderActions";
 import { connect } from "react-redux";
 import { useEffect } from "react";
 import { Redirect } from "react-router-dom";
-
+import empty from "../Components/images/undraw_empty_cart_co35.svg"
 const Cart = ({ getCart, cart, placeOrder, history, user, cartResponse }) => {
   const handleclickplaceorder = () => {
     placeOrder(history);
@@ -44,7 +44,8 @@ const Cart = ({ getCart, cart, placeOrder, history, user, cartResponse }) => {
         </table>
         {cart.length === 0 ? (
           <div>
-            <h3>No Item</h3>
+            <p className='head'>Your Cart is Empty</p>
+           <img src={empty} alt="empty cart" style={{height:"19rem", width:'50rem',marginTop:"2rem" }}/>
           </div>
         ) : (
           <input

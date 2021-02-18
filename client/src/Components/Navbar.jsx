@@ -15,12 +15,6 @@ const Navbar = ({ user, logoutUser, history, cart }) => {
 	};
 	return (
 		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-			{/* <div className="navbar-brand">
-				<img src={logo} alt="" className="logo"/>
-				<h3 className='ml-5'>
-					<Link to="/home"> ShopNow</Link>
-				</h3>
-			</div> */}
 			<NavLink to="/home" style={{ textDecoration: "none" }}>
 				<div className="logo_cmpName">
 					<img src={logo} alt="logo" />

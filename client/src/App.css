@@ -19,7 +19,7 @@ body {
   width: 39px;
   margin-top: 5px;
   margin-right: 5px;
-  
+
 }
 
 .lds-dual-ring {
@@ -47,34 +47,22 @@ body {
   }
 }
 
-/* .lds-hourglass {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
+.slider img{
+  height: 23rem;
+  width: 65rem;
+  border-radius: 20px;
 }
-.lds-hourglass:after {
-  content: " ";
-  display: block;
-  border-radius: 50%;
-  width: 0;
-  height: 0;
-  margin: 8px;
-  box-sizing: border-box;
-  border: 32px solid #000000;
-  border-color: #000000 transparent #000000 transparent;
-  animation: lds-hourglass 1.2s infinite;
+img{
+  border-style: none !important
 }
-@keyframes lds-hourglass {
-  0% {
-    transform: rotate(0);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  50% {
-    transform: rotate(900deg);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  100% {
-    transform: rotate(1800deg);
-  }
-} */
+.head{
+  text-align: center;
+}
+.login_div{
+  display: flex;
+}
+.imgauth img{
+  margin-top: 1rem;
+  height: 25rem;
+  margin-right: 10rem;
+}

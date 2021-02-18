@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { loginUser } from "../redux/actions/userActions";
 import { connect } from "react-redux";
 import Button from '@material-ui/core/Button';
+import auth from "../Components/images/undraw_authentication_fsn5.svg"
 const Loginpage = ({
   loginUser,
   response,
@@ -97,8 +98,13 @@ const Loginpage = ({
   };
 
   return (
+    <>
+    <div className='login_div'>
+    <div className='imgauth'>
+      <img src={auth} alt=""/>
+    </div>
     <div
-      class="form-group border padding-small margin-top-large lg-4 md-4s sm-10"
+      class="form-group padding-small margin-top-large lg-4 md-4s sm-10"
       style={{ width: "35%" }}
     >
       {userFetchingState ? (
@@ -165,6 +171,8 @@ const Loginpage = ({
         </Link>
       </p>
     </div>
+    </div>
+    </>
   );
 };
 
