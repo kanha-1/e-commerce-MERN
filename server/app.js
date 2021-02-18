@@ -23,11 +23,11 @@ app.use("/category", categoryRouter);
 app.use("/order", orderRouter);
 app.use("/cart", cartRouter);
 
-app.use(express.static("client/build"));
-app.use(express.static("booksappimages"));
-app.get("*", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-});
+// app.use(express.static("client/build"));
+// app.use(express.static("booksappimages"));
+// app.get("*", (req, res) => {
+// 	res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+// });
 
 app.use(function (err, req, res, next) {
 	res
