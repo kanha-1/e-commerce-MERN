@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { connect } from "react-redux";
 import { registerUser } from "../redux/actions/userActions";
+import Button from '@material-ui/core/Button';
+import { Link } from "react-router-dom";
 
 const Registerpage = ({
   registerUser,
@@ -217,17 +219,27 @@ const Registerpage = ({
         ) : (
           ""
         )}
-        <input
+        <Button
+        style={{
+          backgroundColor:"Blue",
+          color:"white",
+          marginLeft:"1rem"
+        }}
           ref={inputSubmit}
           disabled={state.buttonState}
           onClick={handlesubmit}
           type="button"
           disabled={state.buttonState}
-          className={
-            state.buttonState ? "disabled margin btnr" : "btn-secondary margin btnb"
-          }
           value="Register"
-        />
+        >
+          Signup
+          </Button>
+          <p className="margin">
+        Already Have a account{" "}
+        <Link style={{ textDecoration: "none" }} to="/login">
+          <span className="text-secondary">Login here</span>
+        </Link>
+      </p>
         {response ? (
           <p className="text-primary padding-left">{response.message}:</p>
         ) : null}

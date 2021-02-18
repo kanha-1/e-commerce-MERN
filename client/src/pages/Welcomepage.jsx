@@ -5,7 +5,7 @@ export class Welcomepage extends Component {
     return (
       <div>
         <h2 style={{ margin: "150px 50px" ,color:"lightblue"}}>
-          You are not logged in. please login to order products!
+           please login to order products!
         </h2>
       </div>
     );

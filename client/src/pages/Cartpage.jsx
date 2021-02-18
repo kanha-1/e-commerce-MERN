@@ -9,9 +9,6 @@ const Cart = ({ getCart, cart, placeOrder, history, user, cartResponse }) => {
   const handleclickplaceorder = () => {
     placeOrder(history);
   };
-  const handleclicktohome = () => {
-    history.push("/home");
-  };
   useEffect(() => {
     if (sessionStorage.getItem("auth_token")) {
       getCart();
@@ -47,18 +44,7 @@ const Cart = ({ getCart, cart, placeOrder, history, user, cartResponse }) => {
         </table>
         {cart.length === 0 ? (
           <div>
-            <h3>Your Cart is empty. Please add some item.</h3>
-
-            <h4
-              style={{
-                color: "#57A2E9",
-                textAlign: "center",
-                cursor: "pointer",
-              }}
-              onClick={handleclicktohome}
-            >
-              Click here to go to Home page
-            </h4>
+            <h3>No Item</h3>
           </div>
         ) : (
           <input

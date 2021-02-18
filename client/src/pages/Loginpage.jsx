@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { loginUser } from "../redux/actions/userActions";
 import { connect } from "react-redux";
-
+import Button from '@material-ui/core/Button';
 const Loginpage = ({
   loginUser,
   response,
@@ -137,14 +137,19 @@ const Loginpage = ({
         id="paperInputs2"
         placeholder="Enter your Passowrd"
       />
-      <input
+      <Button
+      style={{
+        backgroundColor:"red",
+        color:"white",
+        marginLeft:"1rem"
+      }}
         onClick={handleSubmit}
         ref={inputSubmit}
-        type="button"
-        class="btn-secondary margin"
         value="Login"
-        disabled={state.buttonState}
-      />
+        // disabled={state.buttonState}
+      >
+        Login
+      </Button>
       {state.formerror ? (
         <p className="text-danger padding-left">{state.formerror}:</p>
       ) : (

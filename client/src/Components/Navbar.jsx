@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import utills from "../utils";
 import { logoutUser } from "../redux/actions/userActions";
 import { withRouter } from "react-router-dom";
-
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 const Navbar = ({ user, logoutUser, history }) => {
   const handlelogout = () => {
     logoutUser(history);
@@ -27,6 +28,7 @@ const Navbar = ({ user, logoutUser, history }) => {
             {user ? (
               <>
                 <li>
+                  <ShoppingCartIcon style={{paddingTop: "10px"}}/>
                   <Link to="/cart">Cart</Link>
                 </li>
                 <li>
@@ -39,9 +41,9 @@ const Navbar = ({ user, logoutUser, history }) => {
                   </h4>
                 </li>
 
-                <button onClick={handlelogout} class="btn-small btn-danger">
-                  Logout
-                </button>
+                {/* <button onClick={handlelogout} > */}
+                  <ExitToAppIcon onClick={handlelogout} style={{paddingTop:"5px", color:"red",cursor: "pointer"}}/>
+                {/* </button> */}
               </>
             ) : (
              <>
