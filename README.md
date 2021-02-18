@@ -1,2 +1,2 @@
 # e-commerce-MERN
-# Live - https://e-nextshop.netlify.app/
+# Live - https://e-shopnow.netlify.app/
