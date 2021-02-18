@@ -1,0 +1,28 @@
+{
+  "name": "kanha",
+  "version": "1.0.0",
+  "description": "fprt",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm install && cd client/ && npm install && npm run build"
+  },
+  "author": "Kanha",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.24.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

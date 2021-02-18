@@ -1,0 +1,16 @@
+.bg{
+    background: #047BD5 !important;
+}
+nav a{
+    color:white!important;
+    border-bottom: none !important;
+}
+.btnr{
+    color: red !important;
+}
+.btnb{
+    color: blueviolet !important;
+}
+.border{
+    border: none !important;
+}
