@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <div className="row flex-center" style={{marginTop:"70px",width:"100%"}}>
+      <div className="row flex-center" style={{width:"100%"}}>
       <Switch>
         <Route exact path="/login" component={Loginpage}/>
         <Route exact path="/register" component={Registerpage}/>

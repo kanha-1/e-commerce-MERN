@@ -1,24 +1,32 @@
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import utills from "../utils";
 import { logoutUser } from "../redux/actions/userActions";
 import { withRouter } from "react-router-dom";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import IconButton from "@material-ui/core/IconButton";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import Badge from '@material-ui/core/Badge';
+import Badge from "@material-ui/core/Badge";
+import logo from "./images/logo.png"
 const Navbar = ({ user, logoutUser, history, cart }) => {
 	// console.log(cart.length)
 	const handlelogout = () => {
 		logoutUser(history);
 	};
 	return (
-		<nav class="border split-nav fixed bg">
-			<div className="nav-brand">
-				<h3>
-					<Link to="/home"> NextShop</Link>
+		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			{/* <div className="navbar-brand">
+				<img src={logo} alt="" className="logo"/>
+				<h3 className='ml-5'>
+					<Link to="/home"> ShopNow</Link>
 				</h3>
-			</div>
+			</div> */}
+			<NavLink to="/home" style={{ textDecoration: "none" }}>
+				<div className="logo_cmpName">
+					<img src={logo} alt="logo" />
+					<h3>ShopNow</h3>
+				</div>
+			</NavLink>
 			<div className="collapsible">
 				<input id="collapsible0" type="checkbox" name="collapsible0" />
 				<label for="collapsible0">
@@ -31,20 +39,20 @@ const Navbar = ({ user, logoutUser, history, cart }) => {
 						{user ? (
 							<>
 								<li>
-                  <IconButton>
-									<Badge color="secondary" badgeContent={cart?.length}>
-                  <Link to="/cart">
-                  <ShoppingCartIcon />
-                  </Link>
-									</Badge>
-                  </IconButton>
+									<IconButton>
+										<Badge color="secondary" badgeContent={cart?.length}>
+											<Link to="/cart">
+												<ShoppingCartIcon />
+											</Link>
+										</Badge>
+									</IconButton>
 								</li>
 								<li>
 									<Link to="/order">Orders</Link>
 								</li>
 								<li>
 									{" "}
-									<h4 style={{ margin: "0" }}>
+									<h4 style={{ margin: "0",color:'white' }} className='ml-2 mr-2'>
 										{utills.limitDescription(user.name, 7)}
 									</h4>
 								</li>
@@ -58,11 +66,11 @@ const Navbar = ({ user, logoutUser, history, cart }) => {
 							</>
 						) : (
 							<>
-								<li>
+								<li className="mr-4">
 									<Link to="/login"> Login</Link>
 								</li>
-								<li>
-									<Link to="/register"> Register</Link>
+								<li className="mr-4">
+									<Link to="/register"> SignUp</Link>
 								</li>
 							</>
 						)}

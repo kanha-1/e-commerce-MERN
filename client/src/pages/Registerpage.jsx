@@ -145,7 +145,7 @@ const Registerpage = ({
         {responseFetchingState ? (
           <div
             style={{ position: "absolute", top: "40%", left: "45%" }}
-            class="lds-dual-ring"
+            class="spinner"
           ></div>
         ) : null}
         <input

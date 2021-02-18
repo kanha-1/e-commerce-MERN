@@ -16,11 +16,11 @@ const Orderpage = ({ orders, getallOrders, history, user }) => {
   return user ? (
     !orders ? (
       <div style={{ position: "absolute", top: "40%", left: "45%" }}>
-        <div class="lds-hourglass"></div>
+        <div class="lds-dual-ring"></div>
       </div>
     ) : orders.length === 0 ? (
       <div>
-        <h3>Your Orders are empty.</h3>
+        <h3 className='mt-4'>Your Orders are empty.</h3>
 
         <h4
           style={{ color: "#57A2E9", textAlign: "center", cursor: "pointer" }}

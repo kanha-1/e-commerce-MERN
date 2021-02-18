@@ -17,7 +17,7 @@ const Cart = ({ getCart, cart, placeOrder, history, user, cartResponse }) => {
   return user ? (
     !cart ? (
       <div style={{ position: "absolute", top: "40%", left: "45%" }}>
-        <div class="lds-hourglass"></div>
+        <div class="lds-dual-ring"></div>
       </div>
     ) : (
       <>

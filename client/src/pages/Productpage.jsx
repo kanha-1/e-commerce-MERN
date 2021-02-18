@@ -14,7 +14,7 @@ const Productpage = ({ fetchAllProducts, productData, cartResponse, user }) => {
 	return user ? (
 		!productData ? (
 			<div style={{ position: "absolute", top: "40%", left: "45%" }}>
-				<div class="lds-hourglass"></div>
+				<div class="lds-dual-ring"></div>
 			</div>
 		) : (
 			<Grid className="m-3"

@@ -104,7 +104,7 @@ const Loginpage = ({
       {userFetchingState ? (
         <div
           style={{ position: "absolute", top: "35%", left: "45%" }}
-          class="lds-dual-ring"
+          className="spineer"
         ></div>
       ) : null}
 
